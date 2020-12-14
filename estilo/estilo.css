@@ -22,9 +22,9 @@ body {
 
 /********** BARRA DE NAVEGACIÓN **********/
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 86%;
+    width: 100%;
     z-index: 999;
 }
 .topnav {
@@ -153,9 +153,6 @@ footer {
     }
     .grid1col {
         grid-template-columns: 100%;
-    }
-    nav {
-        width: 80%;
     }
     #textoIntro p {
         margin: 0px 40px 30px 40px;

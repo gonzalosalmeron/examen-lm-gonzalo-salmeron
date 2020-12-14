@@ -1,0 +1,160 @@
+/***** LAYOUT BÁSICO ***************/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url(../imagenes/tile-sky2.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+    background-image: url(../imagenes/tile.jpg);
+    margin: 0px 90px 0px 90px;
+}
+/********** FUENTES **********/
+@font-face{
+    src: url(../tipografias/DragonFire.ttf);
+    font-family: 'titulos';
+}
+@font-face{
+    src: url(../tipografias/san_frediano_regular.ttf);
+    font-family: 'texto';
+}
+
+/********** BARRA DE NAVEGACIÓN **********/
+nav {
+    position: fixed;
+    top: 0;
+    width: 86%;
+    z-index: 999;
+}
+.topnav {
+    overflow: hidden;
+    background-color: rgb(99, 36, 124);
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: texto;
+    overflow: hidden;
+}
+.topnav a:hover {
+    background-color: rgb(87, 106, 214);
+}
+.topnav .icon {
+    display: none;
+}
+/************** HERO SECTION *********/
+#hero {
+    background-image:url('../imagenes/dragon1.jpg');
+    background-size: cover;
+    background-position: left;
+    height: 90vh;
+}
+#hero img {
+    width: 100%;
+    height: 90vh;
+    margin-top: 0%;
+    background-size: cover;
+}
+#titulo {
+    font-size: 40px;
+    color: rebeccapurple;
+    font-family: titulos;
+    position: absolute;
+    top: 40px;
+    right: 150px;
+    background-color: #e6e6e68e;
+    padding: 1%;
+    border-radius: 10px 40px;
+}
+/************** DESCRIPCIÓN *********/
+#tituloIntro p {
+    font-family: titulos;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px 0px;
+}
+#textoIntro p {
+    margin: 0px 80px 30px 80px;
+    font-family: texto;
+    color: #ddd;
+}
+/************** GALERÍA DE IMÁGENES *********/
+#galeria {
+    padding: 18px;
+    background-color: #ddd;
+}
+.grid1col {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.col1 {
+    padding: 12px;
+    margin: 8px;
+    transition: 1.3s;
+}
+.col1 img {
+    width: 100%;
+    opacity: 0.6;
+    transition: 1s;
+}
+.col1 img:hover {
+    opacity: 1;
+}
+
+/****************** FOOTER ******************/
+footer {
+    text-align: center;
+    padding: 1% 0px;
+    color: white;
+}
+/************** MEDIA **************/
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+}
+  
+@media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #container {
+        margin: 0px 40px 0px 40px;
+    }
+    .grid1col {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (max-width: 900px) {
+    #titulo {
+        font-size: 32px;
+        right: 70px;
+    }
+    #hero {
+        background-position: center;
+    }
+    .grid1col {
+        grid-template-columns: 100%;
+    }
+    nav {
+        width: 80%;
+    }
+}
